@@ -16,7 +16,7 @@ def main():
         f"https://api.openweathermap.org/data/2.5/weather?lat={lati}&lon={longi}&appid={api_key}"
     ).json()
 
-    print("Weather: ", weather_response["weather"][0]["main"])
+    print("Weather:", weather_response["weather"][0]["main"])
     print(
         "Temperature: {} Celcius".format(
             round(weather_response["main"]["temp"] - 273.15, 2)
@@ -24,6 +24,7 @@ def main():
     )
     print("Humidity: {} %".format(weather_response["main"]["humidity"]))
     print("Wind Speed: {} meter/sec".format(weather_response["wind"]["speed"]))
+    
     return
 
 
